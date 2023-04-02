@@ -1,0 +1,40 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tictactoe-youtube", "src\Tictactoe-youtube.csproj", "{CCA82022-1D4F-42D8-9049-8CD79D68412B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{85A65F6A-0DEE-4FBE-A5BF-6263A503B68A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TitTacToe.Test", "test\TitTacToe.Test\TitTacToe.Test.csproj", "{8403DFDB-BB0D-4E23-8AA7-14949F5FF0E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{18A12B4F-19E7-4DB0-867F-4420A6BE308D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCA82022-1D4F-42D8-9049-8CD79D68412B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA82022-1D4F-42D8-9049-8CD79D68412B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA82022-1D4F-42D8-9049-8CD79D68412B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA82022-1D4F-42D8-9049-8CD79D68412B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{831A09E8-4566-4947-B4C4-F8EDB5FE2FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{831A09E8-4566-4947-B4C4-F8EDB5FE2FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{831A09E8-4566-4947-B4C4-F8EDB5FE2FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{831A09E8-4566-4947-B4C4-F8EDB5FE2FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8403DFDB-BB0D-4E23-8AA7-14949F5FF0E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8403DFDB-BB0D-4E23-8AA7-14949F5FF0E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8403DFDB-BB0D-4E23-8AA7-14949F5FF0E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8403DFDB-BB0D-4E23-8AA7-14949F5FF0E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CCA82022-1D4F-42D8-9049-8CD79D68412B} = {18A12B4F-19E7-4DB0-867F-4420A6BE308D}
+		{8403DFDB-BB0D-4E23-8AA7-14949F5FF0E5} = {85A65F6A-0DEE-4FBE-A5BF-6263A503B68A}
+	EndGlobalSection
+EndGlobal
