@@ -11,10 +11,54 @@ public class Program
 
     public static void Main()
     {
-
-
         var game = new TicTacToe.Engine.TicTacToe();
-        RenderGame(game);
+        //RenderGame(game);
+        PlayManyGame(game, 1000);
+    }
+
+    private static void PlayManyGame(TicTacToe.Engine.TicTacToe game, int numberOfGames)
+    {
+        int winXCount = 0;
+        int winOCount = 0;
+        int tieCount = 0;
+
+        while (numberOfGames >= 1)
+        {
+            while (game.State is GameState.InProgress inprogress)
+            {
+                //RenderInprogress(inprogress);
+                var currentAgent = inprogress.CurrentPlayer == Players.X ? agentX : agentY;
+                var move = currentAgent.Move(inprogress);
+                game.Play(move);
+            }
+
+            if (game.State is GameState.Finished finished)
+            {
+                if (finished.Outcome is GameOutcome.Tie) tieCount++;
+                else if (finished.Outcome is GameOutcome.Won won && won.By == Players.X) winXCount++;
+                else winOCount++;
+
+                numberOfGames--;
+                game.NewGame();
+            }
+        }
+
+        RenderStat(winXCount, winOCount, tieCount);
+
+    }
+
+    private static void RenderStat(int winXCount, int winOCount, int tieCount)
+    {
+        float total = winXCount + winOCount + tieCount;
+        AnsiConsole.Clear();
+        AnsiConsole.Write(new BarChart()
+            .Width(60)
+            .Label($"[green bold underline]Game stats : {(int)total}[/]")
+            .CenterLabel()
+            .AddItem($"Win player X: {winXCount / total:P}", winXCount, Color.Blue)
+            .AddItem($"Win player O: {winOCount / total:P}", winOCount, Color.Red)
+            .AddItem($"Tie: {tieCount / total:P}", tieCount, Color.Yellow));
+   
     }
 
     private static void RenderGame(TicTacToe.Engine.TicTacToe game)
